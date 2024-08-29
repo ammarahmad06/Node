@@ -1,0 +1,17 @@
+Certainly! Here’s a simple table summarizing the key points and functionality of the `fs.js` file:
+
+| **Operation**           | **Description**                                                  | **Code**                                                      |
+|-------------------------|------------------------------------------------------------------|---------------------------------------------------------------|
+| **Require fs module**  | Import the File System module.                                  | `const fs = require('fs');`                                  |
+| **Create Directory**   | Create nested directories (`my-docs/a/b`).                      | `fs.mkdirSync('my-docs/a/b', { recursive: true });`           |
+| **Write File (Sync)**  | Write text to a file synchronously (commented out).              | `fs.writeFileSync('test.txt','Hey! Hello.');`                |
+| **Write File (Async)** | Write text to a file asynchronously (commented out).             | `fs.writeFile('test.txt', 'Hey! There.', (err) => { });`      |
+| **Read File (Sync)**   | Read text from a file synchronously (commented out).             | `const res = fs.readFileSync('./contact.txt', "utf-8");`      |
+| **Read File (Async)**  | Read text from a file asynchronously (commented out).           | `fs.readFile('./contact.txt', "utf-8", (err, result) => { });` |
+| **Append to File**      | Append text to a file synchronously (commented out).             | `fs.appendFileSync("./test.txt", `${Date.now()} Hey There\n`);` |
+| **Copy File**          | Copy a file synchronously (commented out).                       | `fs.cpSync("./test.txt","./copy.txt");`                       |
+| **Delete File**        | Delete a file synchronously (commented out).                     | `fs.unlinkSync("./copy.txt");`                                |
+| **Check File Type**    | Check if a path is a file or directory (commented out).          | `console.log(fs.statSync("./test.txt").isFile());`            |
+| **Check Directory Type** | Check if a path is a file or directory (commented out).         | `console.log(fs.statSync("./test.txt").isDirectory());`       |
+
+This table provides a clear and concise overview of the operations and code in `fs.js`.

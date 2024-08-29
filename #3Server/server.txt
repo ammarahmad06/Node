@@ -1,0 +1,23 @@
+This file creates a basic web server using Node.js. Here's a simple explanation:
+
+Modules:
+
+http: This module is used to create an HTTP server.
+fs: This module allows the server to interact with the file system, like reading or writing files.
+Server Creation:
+
+http.createServer(...): This function creates an HTTP server that handles requests (req) and sends responses (res).
+Logging Requests:
+
+Every time the server receives a request, it logs the request details (the time and the requested URL) to a file called log.txt. The fs.appendFile method is used, which writes the log asynchronously (it doesn't block the rest of the code from running).
+Responding to Requests:
+
+The server checks the requested URL (req.url) and sends back different HTML content based on the path:
+"/": Sends "HomePage".
+"/About": Sends "AboutPage".
+"/Contact": Sends "ContactPage".
+Any other path: Sends "Page Not Found".
+Starting the Server:
+
+The server listens for incoming requests on port 7000. When the server starts, it logs "Server Started!" to the console.
+In summary, this file sets up a simple web server that logs incoming requests and serves different content based on the requested path.

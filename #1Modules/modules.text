@@ -1,0 +1,9 @@
+# Node.js uses a modular system to organize code. Each file in Node.js is treated as a module, and you can export and import functions, objects, or values between different files. This modular approach promotes code reusability and separation of concerns.
+
+Key Concepts:
+
+1. module.exports: This object is used to define what a module exports and makes available to other files that require it. You can assign a function, object, or any value to module.exports.
+
+2. exports: This is a shorthand for module.exports that allows you to add properties or methods to the module.exports object. It’s often used when exporting multiple functions or values.
+
+3. require(): This function is used to import modules into other files. It reads a file, evaluates the code, and returns the module.exports of that file.
