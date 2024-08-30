@@ -7,7 +7,7 @@ const url = require('url');
 const myServer = http.createServer((req, res) => {
     if (req.url === "/favicon.ico") return res.end();
 
-    const log = `${Date.now()}: ${req.url} New Req Received\n`;
+    const log = `${Date.now()}: ${req.url} | Method is ${req.method} New Req Received\n`;
     const myUrl = url.parse(req.url, true);
     console.log("🚀 ~ myServer ~ myUrl:", myUrl)
 
@@ -15,7 +15,7 @@ const myServer = http.createServer((req, res) => {
     fs.appendFile("log.txt", log, (err, data) => {
         switch (myUrl.pathname) {
             case "/":
-                res.end("Home Page");
+                if (req.method === 'GET') res.end("Home Page");
                 break;
             case "/about":
                 const name = myUrl.query.name;
